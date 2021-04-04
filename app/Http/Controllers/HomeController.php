@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\Comment;
+use App\Country;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
@@ -38,12 +39,14 @@ class HomeController extends Controller
         // $post = Post::find(1);
         // dd($post->comments()->where('id', 2)->get());
 
+        $user = User::find(2);
+        dd($user->carInfo);
 
     }
 
     public function index()
     {
-        $user = User::find(2);
-        dd($user->carInfo);
+        $country = Country::find(2);
+        dd($country->posts);
     }
 }

@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Address');
     }
+
+    public function carInfo()
+    {
+        return $this->hasOneThrough('App\Information', 'App\Car');
+    }
 }

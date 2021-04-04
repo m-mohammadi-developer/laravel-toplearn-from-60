@@ -17,10 +17,7 @@ class HomeController extends Controller
         // $user = User::find(1);
         // dd($user->address);
         // dd($address->user);
-    }
-    
-    public function index()
-    {
+
         // $comment = Comment::find(1);
         // $post = Post::find(1);
         // $posts = Post::has('comments')->get();
@@ -42,7 +39,11 @@ class HomeController extends Controller
         // dd($post->comments()->where('id', 2)->get());
 
 
+    }
 
-        
+    public function index()
+    {
+        $user = User::find(2);
+        dd($user->carInfo);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Address;
 use App\Comment;
 use App\Country;
+use App\Image;
 use App\Post;
 use App\Tag;
 use App\User;
@@ -40,16 +41,12 @@ class HomeController extends Controller
         // $post = Post::find(1);
         // dd($post->comments()->where('id', 2)->get());
 
-        $user = User::find(2);
-        dd($user->carInfo);
+        // $user = User::find(2);
+        // dd($user->carInfo);
 
-        $country = Country::find(2);
-        dd($country->posts);
+        // $country = Country::find(2);
+        // dd($country->posts);
 
-    }
-
-    public function index()
-    {
         // posts<->tags
         // $post = Post::find(7);
         // dd($post->tags);
@@ -67,6 +64,18 @@ class HomeController extends Controller
         // dd($post->tags()->first()->pivot->created_at);
         // dd($post->tags()->first()->pivot->updated_at);
 
+    }
 
+    public function index()
+    {
+         
+        // $post = Post::find(2);
+        // dd($post->image);
+
+        // $user = User::find(2);
+        // dd($user->image);
+
+        // $image = Image::find(2);
+        // dd($image->imageable);
     }
 }

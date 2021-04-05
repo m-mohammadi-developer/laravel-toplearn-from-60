@@ -46,5 +46,10 @@ class User extends Authenticatable
     {
         return $this->hasOneThrough('App\Information', 'App\Car');
     }
+
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
+    }
     
 }

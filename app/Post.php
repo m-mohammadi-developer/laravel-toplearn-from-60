@@ -17,4 +17,9 @@ class Post extends Model
         // return $this->belongsToMany('App\Tag')->withPivot('CostumColumn');
         // return $this->belongsToMany('App\Tag')->withTimestamps();
     }
+
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
+    }
 }

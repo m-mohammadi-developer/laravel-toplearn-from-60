@@ -9,6 +9,7 @@ use App\Image;
 use App\Post;
 use App\Tag;
 use App\User;
+use App\Video;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -64,11 +65,7 @@ class HomeController extends Controller
         // dd($post->tags()->first()->pivot->created_at);
         // dd($post->tags()->first()->pivot->updated_at);
 
-    }
 
-    public function index()
-    {
-         
         // $post = Post::find(2);
         // dd($post->image);
 
@@ -77,5 +74,24 @@ class HomeController extends Controller
 
         // $image = Image::find(2);
         // dd($image->imageable);
+    }
+
+    public function index()
+    {
+        // $post = Post::find(1);
+        // dd($post->comments);
+
+        // $video = Video::find(1);
+        // dd($video->comments);
+
+        // $comment = Comment::find(2);
+        // dd($comment->commentable);
+
+        $post = Post::find(4);
+        $comment = new Comment;
+        $comment->body = "That's So Cool";
+        $post->comments()->save($comment);
+
+
     }
 }

@@ -11,12 +11,12 @@ class Post extends Model
     //     return $this->hasMany('App\Comment');
     // }
 
-    public function tags()
-    {
-        return $this->belongsToMany('App\Tag');
-        // return $this->belongsToMany('App\Tag')->withPivot('CostumColumn');
-        // return $this->belongsToMany('App\Tag')->withTimestamps();
-    }
+    // public function tags()
+    // {
+    //     return $this->belongsToMany('App\Tag');
+    //     // return $this->belongsToMany('App\Tag')->withPivot('CostumColumn');
+    //     // return $this->belongsToMany('App\Tag')->withTimestamps();
+    // }
 
     public function image()
     {
@@ -28,4 +28,10 @@ class Post extends Model
     {
         return $this->morphMany('App\Comment', 'commentable');
     }
+
+    public function tags()
+    {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
+
 }

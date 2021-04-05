@@ -74,11 +74,8 @@ class HomeController extends Controller
 
         // $image = Image::find(2);
         // dd($image->imageable);
-    }
 
-    public function index()
-    {
-        // $post = Post::find(1);
+          // $post = Post::find(1);
         // dd($post->comments);
 
         // $video = Video::find(1);
@@ -87,11 +84,23 @@ class HomeController extends Controller
         // $comment = Comment::find(2);
         // dd($comment->commentable);
 
-        $post = Post::find(4);
-        $comment = new Comment;
-        $comment->body = "That's So Cool";
-        $post->comments()->save($comment);
+        // $post = Post::find(4);
+        // $comment = new Comment;
+        // $comment->body = "That's So Cool";
+        // $post->comments()->save($comment);
+    }
 
+    public function index()
+    {
+        // $post = Post::find(2);
+        // dd($post->tags);
+
+        // $video = Video::find(1);
+        // dd($video->tags);
+
+        // $tag = Tag::find(1);
+        // dd($tag->posts);
+        // dd($tag->videos);
 
     }
 }

@@ -51,5 +51,10 @@ class User extends Authenticatable
     {
         return $this->morphOne('App\Image', 'imageable');
     }
+
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
     
 }

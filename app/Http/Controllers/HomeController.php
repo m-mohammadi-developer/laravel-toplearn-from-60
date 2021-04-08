@@ -75,7 +75,7 @@ class HomeController extends Controller
         // $image = Image::find(2);
         // dd($image->imageable);
 
-          // $post = Post::find(1);
+        // $post = Post::find(1);
         // dd($post->comments);
 
         // $video = Video::find(1);
@@ -92,15 +92,42 @@ class HomeController extends Controller
 
     public function index()
     {
-        // $post = Post::find(2);
-        // dd($post->tags);
+        // $posts = Post::all();
+        // foreach ($posts as $post)
+        // {
+        //     dd($post->comments);
+        // }
 
-        // $video = Video::find(1);
-        // dd($video->tags);
+        // $posts = Post::with('comments')->get();
+        // dd($posts[0]->comments);
 
-        // $tag = Tag::find(1);
-        // dd($tag->posts);
-        // dd($tag->videos);
+        // $posts = Post::with(['comments', 'tags'])->get();
+        // // dd($posts);
 
+        // $posts = Post::withCount('comments')->get();
+        // dd($posts[0]->Comments);
+
+        // $posts = Post::with(['comments', 'comment.user'])->get();
+        // $posts = Post::with('comments:id,body')->get();
+
+        // $posts = Post::with(['comments' => function ($query) {
+        //     $query->where('id', '1');
+        // }])->get();
+        // dd($posts[0]->comments);
+
+        // select * from posts
+        // select * from comments where post_id in [1,2,3,...]
+
+        // egar-lazy
+        // $posts = Post::all();
+        // if ($cond) {
+        //     $posts->load('comments');
+        // }
+
+
+        // $post = Post::find(1);
+        // $post->loadMissing('comments'); // if comments did'nt load then load comments for post
+        // dd($post);
+            
     }
 }

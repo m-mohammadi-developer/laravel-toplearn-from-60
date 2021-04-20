@@ -9,6 +9,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/app.js"></script>
+
         <!-- Styles -->
         <style>
             html, body {
@@ -75,6 +78,7 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
+                        
                     @endauth
                 </div>
             @endif
@@ -82,6 +86,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    <button class="btn btn-danger">click</button>
                 </div>
 
                 <div class="links">
